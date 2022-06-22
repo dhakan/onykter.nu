@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 2rem;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button,
+.title {
+  text-shadow: 2px 2px 0px rgb(0, 0, 0, 0.3);
+}
+
+.button {
+  font-size: inherit;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 1em;
+  transition: all 100ms ease-in;
+  font-weight: bold;
+}
+
+.button:hover {
+  /* background: rgba(0, 30, 255, 0.2); */
+  background: rgba(0, 0, 0, 0.3);
+}
+/* 
+.button:not(:last-child):not(:nth-last-child(2)) {
+  border-bottom: 10px solid rgba(242, 255, 1, 0.3);
+}
+
+.button:nth-child(odd) {
+  border-right: 10px solid rgba(242, 255, 1, 0.3);
+} */
+
+.container {
+  margin: 0 auto;
+  min-height: 100vh;
+  max-width: 40rem;
+  background-image: url("/assets/midsommar.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+/* App */
+.app-main {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Song */
+.song-main {
+  padding: 0.5em;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.melody {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.song-body {
+  font-size: 1rem;
+  color: black;
+  white-space: pre-line;
+  line-height: 1.5;
+  background: rgb(255, 255, 255, 0.5);
+  padding: 0.5em;
+  border-radius: 10px;
+}
