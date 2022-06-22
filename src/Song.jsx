@@ -7,10 +7,10 @@ function Song() {
   const song = songs[id];
 
   return (
-    <main className="song-main container">
-      <h1 className="title">{song.title}</h1>
-      {song.melody && <small className="melody">Melodi: {song.melody}</small>}
-      <p className="song-body">{song.body}</p>
+    <main className="container">
+      <h1 className="title padding">{song.title}</h1>
+      {song.melody && <small className="melody padding">Melodi: {song.melody}</small>}
+      <p className="song-body padding">{song.body}</p>
     </main>
   );
 }
