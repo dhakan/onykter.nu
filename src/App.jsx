@@ -9,7 +9,7 @@ function App() {
     <div className="container">
       <header className="header padding">Bli onykter nu 😍</header>
       <main className="app-main">
-        <Link to={`songs/${randomSong}`} className="button primary">
+        <Link to={`/songs/${randomSong}`} className="button primary">
           Slumpa fram visa 🥂
         </Link>
         {songs.map((song, index) => (

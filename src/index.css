@@ -18,7 +18,8 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: white;
 }
 
 .button,
@@ -33,17 +34,17 @@ a {
   transition: all 100ms ease-in;
   font-weight: bold;
   padding: 0.5em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
 }
 
 .button.primary {
   padding: 1em;
-  background: rgb(1, 1, 187, 0.5);
+  background: rgb(1, 1, 187, 0.8);
   box-shadow: 0 0 0 0 rgb(1, 1, 187, 0.5);
-  animation: pulse 1.5s infinite;
-}
-
-.button.primary:hover {
-  animation: none;
+  animation: pulse 2s infinite;
+  border-radius: 50rem;
 }
 
 @keyframes pulse {
@@ -62,7 +63,7 @@ a {
   }
 }
 
-.button:hover {
+.button:not(.primary):hover {
   /* background: rgba(0, 30, 255, 0.2); */
   background: rgb(0, 0, 0, 0.3);
 }
@@ -89,6 +90,10 @@ a {
 
 .padding {
   padding: 1rem;
+}
+
+.top-margin {
+  margin-top: 0.5em;
 }
 
 /* App */
