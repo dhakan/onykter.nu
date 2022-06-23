@@ -12,7 +12,7 @@ function Song() {
     <div>
       <main className="container">
         <header className="header padding">
-          <Link to={`/`}>Visa låtar</Link>
+          <Link to={`/`} className="spin">Visa låtar</Link>
         </header>
         <h1 className="title padding">{song.title}</h1>
         {song.melody && (
