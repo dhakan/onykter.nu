@@ -92,7 +92,7 @@ a {
   from {
     transform: rotate(-2deg);
   }
-  
+
   to {
     transform: rotate(2deg);
   }
@@ -146,6 +146,7 @@ a {
   font-size: 1.6rem;
   font-weight: bold;
   display: block;
+  padding-bottom: 1rem;
 }
 
 .song-body {

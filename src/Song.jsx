@@ -12,16 +12,20 @@ function Song() {
     <div>
       <main className="container">
         <header className="header padding">
-          <Link to={`/`} className="spin">Visa låtar</Link>
+          <Link to={`/`} className="spin">
+            Visa låtar
+          </Link>
         </header>
-        <h1 className="title padding">{song.title}</h1>
-        {song.melody && (
-          <small className="melody padding">Melodi: {song.melody}</small>
-        )}
-        <p className="song-body padding">{song.body}</p>
-        <Link to={`/songs/${randomSong}`} className="button primary top-margin">
+        <Link to={`/songs/${randomSong}`} className="button primary">
           Slumpa fram visa 🥂
         </Link>
+        <h1 className="title padding">{song.title}</h1>
+        <p className="song-body padding">
+          {song.melody && (
+            <small className="melody">Melodi: {song.melody}</small>
+          )}
+          {song.body}
+        </p>
       </main>
     </div>
   );
