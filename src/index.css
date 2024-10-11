@@ -113,7 +113,7 @@ a {
 
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100dvh;
   max-width: 50rem;
 }
 
