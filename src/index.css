@@ -16,7 +16,7 @@ body {
   font-size: 1.6rem;
   color: white;
 
-  min-height: 100vh;
+  min-height: 100dvh;
   background-image: url("/assets/midsommar.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
