@@ -1,12 +1,22 @@
-import { useParams, Link } from "react-router-dom";
-
+import { Link, useParams } from "react-router-dom";
 import songs from "../data/songs";
 
 function Song() {
   const { id } = useParams();
-  const song = songs[id];
+  const currentSong = songs[id];
 
-  const randomSong = Math.floor(Math.random() * songs.length);
+  // Filter out the current song
+  const songsExcludingCurrent = songs.filter(
+    (_, index) => index !== parseInt(id, 10)
+  );
+
+  // Generate a random index based on the filtered list length
+  const randomIndex = Math.floor(Math.random() * songsExcludingCurrent.length);
+
+  // Get the random song ID from the filtered list
+  const randomSongId = songs.findIndex(
+    (song) => song === songsExcludingCurrent[randomIndex]
+  );
 
   return (
     <div>
@@ -16,15 +26,15 @@ function Song() {
             Visa låtar
           </Link>
         </header>
-        <Link to={`/songs/${randomSong}`} className="button primary">
+        <Link to={`/songs/${randomSongId}`} className="button primary">
           Slumpa fram visa 🥂
         </Link>
-        <h1 className="title padding">{song.title}</h1>
+        <h1 className="title padding">{currentSong.title}</h1>
         <p className="song-body padding">
-          {song.melody && (
-            <small className="melody">Melodi: {song.melody}</small>
+          {currentSong.melody && (
+            <small className="melody">Melodi: {currentSong.melody}</small>
           )}
-          {song.body}
+          {currentSong.body}
         </p>
       </main>
     </div>
