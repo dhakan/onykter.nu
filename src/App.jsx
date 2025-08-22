@@ -12,7 +12,7 @@ function App() {
       </header>
       <main className="app-main">
         <Link to={`/songs/${randomSong}`} className="button primary">
-          Slumpa fram visa 🥂
+          🦞 Slumpa fram visa 🦞
         </Link>
         {songs.map((song, index) => (
           <Link key={index} to={`songs/${index}`} className="button">

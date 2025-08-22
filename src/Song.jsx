@@ -27,7 +27,7 @@ function Song() {
           </Link>
         </header>
         <Link to={`/songs/${randomSongId}`} className="button primary">
-          Slumpa fram visa 🥂
+          🦞 Slumpa fram visa 🦞
         </Link>
         <h1 className="title padding">{currentSong.title}</h1>
         <p className="song-body padding">
